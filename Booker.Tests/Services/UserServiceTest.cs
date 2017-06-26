@@ -21,7 +21,6 @@ namespace Booker.Tests.Services
 
             userRepositoryMock.Verify(x => x.AddAsync(It.IsAny<User>()), Times.Once);
             
-
         }
     }
 }
