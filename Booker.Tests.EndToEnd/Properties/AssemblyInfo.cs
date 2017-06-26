@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Booker.EndToEnd")]
+[assembly: AssemblyTitle("Booker.Tests.EndToEnd")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Booker.EndToEnd")]
+[assembly: AssemblyProduct("Booker.Tests.EndToEnd")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("48de8a8b-5014-4ff8-86bd-97fa8afca629")]
+[assembly: Guid("73cad190-3991-4928-88f4-53a44670a0e7")]
 
 // Version information for an assembly consists of the following four values:
 //
