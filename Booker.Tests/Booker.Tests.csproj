@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2|AnyCPU'">
+    <OutputPath>bin\Debug2\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=6.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.1.0\lib\net45\AutoMapper.dll</HintPath>
@@ -140,8 +143,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Booker.Api\Booker.Api.csproj">
-      <Project>{B208B4BD-FDCC-47FA-9E54-A4963C1829F2}</Project>
+      <Project>{b208b4bd-fdcc-47fa-9e54-a4963c1829f2}</Project>
       <Name>Booker.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\Booker.Core\Booker.Core.csproj">
