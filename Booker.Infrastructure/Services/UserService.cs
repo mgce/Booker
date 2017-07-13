@@ -38,6 +38,7 @@ namespace Booker.Infrastructure.Services
 
             var salt = Guid.NewGuid().ToString("N");
             user = new User(email, password, username, salt);
+            _userRepository.AddAsync(user);
         }
     }
 }

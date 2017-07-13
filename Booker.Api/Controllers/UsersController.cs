@@ -1,17 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using Booker.Infrastructure.Commands;
 using Booker.Infrastructure.Commands.Users;
 using Booker.Infrastructure.Services;
 
 namespace Booker.Api.Controllers
 {
-    public class UsersController : ApiController
+    public class UsersController : BaseController
     {
         private readonly IUserService _userService;
+        private readonly ICommandDispatcher _commandDispatcher;
 
-        public UsersController(IUserService userService)
+        public UsersController(IUserService userService, 
+            ICommandDispatcher commandDispatcher) :base(commandDispatcher)
         {
             _userService = userService;
+            _commandDispatcher = commandDispatcher;
         }
 
         // GET: api/Users
@@ -29,6 +33,8 @@ namespace Booker.Api.Controllers
         // POST: api/Users
         public async void Post([FromBody]CreateUserCommand command)
         {
+            await _commandDispatcher.DispatchAsync(command);
+
             await _userService.RegisterAsync(command.Email, command.Username, command.Password);
         }
 

@@ -10,6 +10,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using Booker.Infrastructure.Mappers;
 
 namespace Booker.Api
 {
@@ -22,7 +23,7 @@ namespace Booker.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AutofacConfiguration.Configure();
+            AutofacConfiguration.Configure();            
         }
     }
 }

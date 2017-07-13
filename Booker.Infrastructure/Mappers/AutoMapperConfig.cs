@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -14,10 +15,10 @@ namespace Booker.Infrastructure.Mappers
         public static IMapper Initialize()       
             => new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<User, UserDto>();
-                cfg.CreateMap<Booking, BookingDto>();
+                //cfg.CreateMap<User, UserDto>();
+                //cfg.CreateMap<Booking, BookingDto>();
             })
-            .CreateMapper();
-        
+            .CreateMapper();      
     }
+
 }
