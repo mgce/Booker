@@ -78,9 +78,11 @@
     <Compile Include="IoC\Modules\ServiceModule.cs" />
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\IDetermineRepositoryAssembly.cs" />
+    <Compile Include="Repositories\BookingRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\ServiceRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Services\IDetermineServicesAssembly.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

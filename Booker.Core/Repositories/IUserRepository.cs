@@ -5,18 +5,9 @@ using System.Threading.Tasks;
 
 namespace Booker.Core.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository 
+        : IRepository<User>
     {
-        Task<User> GetAsync(Guid id);
-
         Task<User> GetAsync(string email);
-
-        Task<IEnumerable<User>> GetAllAsync(); 
-
-        Task AddAsync(User user);
-
-        Task RemoveAsync(Guid id);
-
-        Task UpdateAsync(User user);
     }
 }
