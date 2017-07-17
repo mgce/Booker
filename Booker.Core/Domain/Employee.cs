@@ -10,7 +10,7 @@ namespace Booker.Core.Domain
     {
         public Guid UserId { get; protected set; }
 
-        public IEnumerable<Booking> Bookings { get; protected set; }
+        public ICollection<Booking> Bookings { get; protected set; }
 
         public Employee(Guid userId)
         {

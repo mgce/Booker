@@ -11,11 +11,11 @@ namespace Booker.Core.Domain
 
         public Employee Employee { get; protected set; }
 
+        public Service Service { get; protected set; }
+
         public DateTime CreatedAt { get; protected set; }
 
-        public DateTime DateOfTheVisit { get; protected set; }
-
-        public Service Service { get; protected set; }
+        public DateTime DateOfTheVisit { get; protected set; }      
 
         public DateTime UpdatedAt { get; protected set; }
     }

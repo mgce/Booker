@@ -16,6 +16,8 @@ namespace Booker.Core.Domain
 
         public DateTime UpdatedAt { get; protected set; }
 
+        public ICollection<Booking> Bookings { get; set; }
+
         public Service(string name, decimal price)
         {
             SetName(name);
