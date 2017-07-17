@@ -34,8 +34,6 @@ namespace Booker.Api.Controllers
         public async void Post([FromBody]CreateUserCommand command)
         {
             await _commandDispatcher.DispatchAsync(command);
-
-            await _userService.RegisterAsync(command.Email, command.Username, command.Password);
         }
 
         // PUT: api/Users/5

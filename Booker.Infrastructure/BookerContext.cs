@@ -25,17 +25,17 @@ namespace Booker.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Booking>()
-                .HasRequired<Client>(b => b.Client)
+                .HasRequired(b => b.Client)
                 .WithMany(c => c.Bookings)
                 .HasForeignKey(b => b.Id);
 
             modelBuilder.Entity<Booking>()
-                .HasRequired<Employee>(b => b.Employee)
+                .HasRequired(b => b.Employee)
                 .WithMany(e => e.Bookings)
                 .HasForeignKey(b => b.Id);
 
             modelBuilder.Entity<Booking>()
-                .HasRequired<Service>(b => b.Service)
+                .HasRequired(b => b.Service)
                 .WithMany(s => s.Bookings)
                 .HasForeignKey(b => b.Id);
 

@@ -71,7 +71,10 @@
     <Compile Include="Dto\EmployeeDto.cs" />
     <Compile Include="Dto\ServiceDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
-    <Compile Include="Handlers\Users\UserCommandHandler.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\Users\UserCreatedEvent.cs" />
+    <Compile Include="Handlers\Commands\Users\UserCommandHandler.cs" />
+    <Compile Include="Handlers\Events\Users\UserEventHandler.cs" />
     <Compile Include="IoC\Modules\CommandModule.cs" />
     <Compile Include="IoC\Modules\MapperModule.cs" />
     <Compile Include="IoC\Modules\RepositoryModule.cs" />

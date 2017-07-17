@@ -8,6 +8,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using Booker.Api.Controllers;
 using Booker.Core.Domain;
+using Booker.Infrastructure;
 using Booker.Infrastructure.IoC.Modules;
 
 namespace Booker.Api
@@ -19,8 +20,11 @@ namespace Booker.Api
             var builder = new ContainerBuilder();
 
             var config = GlobalConfiguration.Configuration;
+            var assembly = typeof(CommandModule)
+                .GetTypeInfo()
+                .Assembly;
 
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+            //builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterType<UsersController>().InstancePerRequest();
 
 
@@ -29,6 +33,8 @@ namespace Booker.Api
             builder.RegisterModule(new RepositoryModule());
             builder.RegisterModule(new MapperModule());
             builder.RegisterModule(new CommandModule());
+
+            builder.RegisterType<BookerContext>().InstancePerRequest();
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

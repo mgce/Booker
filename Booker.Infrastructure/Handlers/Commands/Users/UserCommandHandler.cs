@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Booker.Infrastructure.Commands;
 using Booker.Infrastructure.Commands.Users;
 using Booker.Infrastructure.Services;
 
-namespace Booker.Infrastructure.Handlers.Users
+namespace Booker.Infrastructure.Handlers.Commands.Users
 {
     class UserCommandHandler : ICommandHandler<CreateUserCommand>
     {

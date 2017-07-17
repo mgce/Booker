@@ -17,5 +17,7 @@ namespace Booker.Core.Repositories
         Task RemoveAsync(T entity);
 
         Task UpdateAsync(T entity);
+
+        Task SaveChangesAsync();
     }
 }
