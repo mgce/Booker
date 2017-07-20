@@ -80,6 +80,11 @@
     <Compile Include="IoC\Modules\RepositoryModule.cs" />
     <Compile Include="IoC\Modules\ServiceModule.cs" />
     <Compile Include="Mappers\AutoMapperConfig.cs" />
+    <Compile Include="Migrations\201707181758394_FirstMigration_EB5D96B6B1934F87901F2831E8A43E21.cs" />
+    <Compile Include="Migrations\201707181758394_FirstMigration_EB5D96B6B1934F87901F2831E8A43E21.Designer.cs">
+      <DependentUpon>201707181758394_FirstMigration_EB5D96B6B1934F87901F2831E8A43E21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BookingRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
@@ -98,6 +103,11 @@
       <Project>{60128089-3972-497a-a4bc-b90a6139a521}</Project>
       <Name>Booker.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707181758394_FirstMigration_EB5D96B6B1934F87901F2831E8A43E21.resx">
+      <DependentUpon>201707181758394_FirstMigration_EB5D96B6B1934F87901F2831E8A43E21.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,43 +14,61 @@ namespace Booker.Infrastructure.Repositories
 
         protected Repository(BookerContext context)
         {
-            _context = context;
+           // _context = context;
         }
 
         public async Task<T> GetAsync(Guid id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            using (var dataContext = new BookerContext())
+            {
+                return await dataContext.Set<T>().FindAsync(id);
+            }       
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _context.Set<T>().ToListAsync();
+            using (var dataContext = new BookerContext())
+            {
+                return await dataContext.Set<T>().ToListAsync();
+            }
         }
 
         public async Task AddAsync(T entity)
         {
-            _context.Set<T>().Add(entity);
-            await _context.SaveChangesAsync();
+            using (var dataContext = new BookerContext())
+            {
+                dataContext.Set<T>().Add(entity);
+                await dataContext.SaveChangesAsync();
+            }
         }
 
         public async Task RemoveAsync(T entity)
         {
-            _context.Set<T>().Remove(entity);
-            await _context.SaveChangesAsync();
+            using (var dataContext = new BookerContext())
+            {
+                dataContext.Set<T>().Remove(entity);
+                await dataContext.SaveChangesAsync();
+            }
         }
 
         public async Task UpdateAsync(T entity)
         {
             if (entity != null)
             {
-                await _context.SaveChangesAsync();
+                using (var dataContext = new BookerContext())
+                {
+                    await dataContext.SaveChangesAsync();
+                }
             }
 
         }
 
         public async Task SaveChangesAsync()
         {
-            await _context.SaveChangesAsync();
+            using (var dataContext = new BookerContext())
+            {
+                await dataContext.SaveChangesAsync();
+            }
         }
     }
 }

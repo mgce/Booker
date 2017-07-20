@@ -19,9 +19,11 @@ namespace Booker.Infrastructure.Repositories
 
         public async Task<User> GetAsync(string email)
         {
-            return await _context.Set<User>()
-                .Where(u => u.Email == email)
-                .SingleOrDefaultAsync<User>();
+            using (var dataContext = new BookerContext())
+            {
+                return await dataContext.Set<User>()
+                    .SingleOrDefaultAsync(u => u.Email == email);
+            }
         }
     }
 }

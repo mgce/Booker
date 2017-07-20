@@ -26,18 +26,27 @@ namespace Booker.Infrastructure
         {
             modelBuilder.Entity<Booking>()
                 .HasRequired(b => b.Client)
-                .WithMany(c => c.Bookings)
-                .HasForeignKey(b => b.Id);
+                .WithMany(c => c.Bookings);
+
+            //modelBuilder.Entity<Client>()
+            //    .HasMany(c => c.Bookings)
+            //    .WithOptional();
 
             modelBuilder.Entity<Booking>()
                 .HasRequired(b => b.Employee)
-                .WithMany(e => e.Bookings)
-                .HasForeignKey(b => b.Id);
+                .WithMany(e => e.Bookings);
+
+            //modelBuilder.Entity<Employee>()
+            //  .HasMany(e => e.Bookings)
+            //  .WithOptional();
 
             modelBuilder.Entity<Booking>()
                 .HasRequired(b => b.Service)
-                .WithMany(s => s.Bookings)
-                .HasForeignKey(b => b.Id);
+                .WithMany(s => s.Bookings);
+
+            //modelBuilder.Entity<Service>()
+            // .HasMany(s => s.Bookings)
+            // .WithOptional();
 
             base.OnModelCreating(modelBuilder);
         }
