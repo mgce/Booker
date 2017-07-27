@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Booker.Infrastructure.Extensions;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Booker.Infrastructure.Services
 {

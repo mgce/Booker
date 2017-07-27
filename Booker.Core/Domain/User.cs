@@ -29,6 +29,12 @@ namespace Booker.Core.Domain
 
         public DateTime UpdatedAt { get; protected set; }
 
+        public virtual ICollection<Claim> Claims { get; set; }
+
+        public virtual ICollection<ExternalLogin> Logins { get; set; }
+
+        public virtual ICollection<Role> Roles { get; set; }
+
         protected User()
         {           
         }
