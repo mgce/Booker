@@ -8,6 +8,7 @@ namespace Booker.Infrastructure.IoC.Modules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
+            builder.RegisterType<Encrypter>().As<IEncrypter>().InstancePerRequest();
             base.Load(builder);
         }
     }

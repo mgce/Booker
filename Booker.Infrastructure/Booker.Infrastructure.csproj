@@ -66,6 +66,7 @@
     <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\Users\CreateUserCommand.cs" />
     <Compile Include="BookerContext.cs" />
+    <Compile Include="Commands\Users\LoginUserCommand.cs" />
     <Compile Include="Dto\BookingDto.cs" />
     <Compile Include="Dto\ClientDto.cs" />
     <Compile Include="Dto\EmployeeDto.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Events\IEvent.cs" />
     <Compile Include="Events\Users\UserCreatedEvent.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Handlers\Commands\Users\UserCommandHandler.cs" />
     <Compile Include="Handlers\Events\Users\UserEventHandler.cs" />
     <Compile Include="IoC\Modules\CommandModule.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\ServiceRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Services\Encrypter.cs" />
+    <Compile Include="Services\IEncrypter.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
