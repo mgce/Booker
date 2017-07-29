@@ -23,14 +23,14 @@ namespace Booker.Infrastructure.Services
 
         public async Task<UserDto> GetAsync(string email)
         {
-            var user = await _userRepository.GetAsync(email);
+            var user = await _userRepository.GetByEmailAsync(email);
 
             return _mapper.Map<User, UserDto>(user);
         }
 
         public async Task RegisterAsync(string email, string username, string password)
         {
-            var user = await _userRepository.GetAsync(email);
+            var user = await _userRepository.GetByEmailAsync(email);
             if (user != null)
             {
                 throw new Exception($"User with email: '{email}' already exists.");

@@ -88,6 +88,9 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Handlers\Commands\Users\UserCommandHandler.cs" />
     <Compile Include="Handlers\Events\Users\UserEventHandler.cs" />
+    <Compile Include="Identity\IdentityRole.cs" />
+    <Compile Include="Identity\IdentityUser.cs" />
+    <Compile Include="Identity\Stores\UserStore.cs" />
     <Compile Include="IoC\Modules\CommandModule.cs" />
     <Compile Include="IoC\Modules\MapperModule.cs" />
     <Compile Include="IoC\Modules\RepositoryModule.cs" />

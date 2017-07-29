@@ -10,7 +10,7 @@ namespace Booker.Infrastructure.Repositories
 {
     public class Repository <T> : IRepository<T> where T:class
     { 
-        public async Task<T> GetAsync(Guid id)
+        public async Task<T> GetByIdAsync(Guid id)
         {
             using (var dataContext = new BookerContext())
             {

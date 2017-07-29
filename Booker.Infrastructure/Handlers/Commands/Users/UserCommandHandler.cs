@@ -26,7 +26,7 @@ namespace Booker.Infrastructure.Handlers.Commands.Users
 
         public async Task HandleAsync(CreateUserCommand command)
         {
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetByEmailAsync(command.Email);
             if (user != null)
             {
                 throw new Exception($"User with email: '{command.Email}' already exists.");
@@ -40,7 +40,7 @@ namespace Booker.Infrastructure.Handlers.Commands.Users
 
         public async Task HandleAsync(LoginUserCommand command)
         {
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetByEmailAsync(command.Email);
             if (user == null)
             {
                 throw new Exception("Invalid credentials");
