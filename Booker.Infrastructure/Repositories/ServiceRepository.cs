@@ -10,9 +10,6 @@ namespace Booker.Infrastructure.Repositories
 {
     public class ServiceRepository : Repository<Service>, IServiceRepository
     {
-        public ServiceRepository(BookerContext context) 
-            : base(context)
-        {
-        }
+       
     }
 }

@@ -7,7 +7,7 @@ using Booker.Core.Domain;
 
 namespace Booker.Core.Repositories
 {
-    interface IRoleRepository : IRepository<Role>
+    public interface IRoleRepository : IRepository<Role>
     {
     }
 }

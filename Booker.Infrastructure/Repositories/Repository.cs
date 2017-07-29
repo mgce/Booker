@@ -9,14 +9,7 @@ using Booker.Core.Repositories;
 namespace Booker.Infrastructure.Repositories
 {
     public class Repository <T> : IRepository<T> where T:class
-    {
-        protected readonly BookerContext _context;
-
-        protected Repository(BookerContext context)
-        {
-           // _context = context;
-        }
-
+    { 
         public async Task<T> GetAsync(Guid id)
         {
             using (var dataContext = new BookerContext())

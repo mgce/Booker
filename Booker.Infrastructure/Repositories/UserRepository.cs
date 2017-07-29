@@ -12,11 +12,6 @@ namespace Booker.Infrastructure.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(BookerContext context) 
-            : base(context)
-        {
-        }
-
         public async Task<User> GetAsync(string email)
         {
             using (var dataContext = new BookerContext())

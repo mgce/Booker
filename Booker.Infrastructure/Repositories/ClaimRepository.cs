@@ -8,8 +8,7 @@ using Booker.Core.Repositories;
 
 namespace Booker.Infrastructure.Repositories
 {
-    public class BookingRepository : Repository<Booking>, IBookingRepository
+    public class ClaimRepository : Repository<Claim>, IClaimRepository
     {
-        
     }
 }
