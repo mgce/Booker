@@ -24,6 +24,11 @@ namespace Booker.Api.Controllers
         private readonly UserManager<IdentityUser, Guid> _userManager;
         private const string LocalLoginProvider = "Local";
 
+        public AccountController(ICommandDispatcher commandDispatcher) 
+            : base(commandDispatcher)
+        {
+        }
+
         public AccountController(ICommandDispatcher commandDispatcher
             , UserManager<IdentityUser, Guid> userManager
             , ISecureDataFormat<AuthenticationTicket> accessTokenFormat) 

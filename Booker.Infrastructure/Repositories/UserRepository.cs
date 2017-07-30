@@ -1,11 +1,6 @@
 ﻿using Booker.Core.Domain;
 using Booker.Core.Repositories;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Validation;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Threading.Tasks;
 
 namespace Booker.Infrastructure.Repositories

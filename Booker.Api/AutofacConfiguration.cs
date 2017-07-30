@@ -1,15 +1,14 @@
-﻿using System.Linq;
+﻿using System;
 using System.Reflection;
-using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 using Autofac;
-using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using Booker.Api.Controllers;
-using Booker.Core.Domain;
 using Booker.Infrastructure;
+using Booker.Infrastructure.Identity.Stores;
 using Booker.Infrastructure.IoC.Modules;
+using Microsoft.AspNet.Identity;
+using Booker.Infrastructure.Identity;
 
 namespace Booker.Api
 {
@@ -35,6 +34,7 @@ namespace Booker.Api
             builder.RegisterModule(new CommandModule());
 
             builder.RegisterType<BookerContext>().InstancePerRequest();
+            builder.RegisterType<UserStore>().As<IUserStore<IdentityUser, Guid>>().InstancePerLifetimeScope();
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

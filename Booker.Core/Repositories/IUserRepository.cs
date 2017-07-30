@@ -1,6 +1,4 @@
 ﻿using Booker.Core.Domain;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Booker.Core.Repositories

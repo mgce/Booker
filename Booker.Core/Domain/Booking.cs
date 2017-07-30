@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Net.Http;
 
 namespace Booker.Core.Domain
 {

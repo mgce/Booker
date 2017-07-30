@@ -1,6 +1,5 @@
 namespace Booker.Infrastructure.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class FirstMigration_EB5D96B6B1934F87901F2831E8A43E21 : DbMigration
