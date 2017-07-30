@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Booker.Core.Domain;
-using Booker.Core.Repositories;
 
-namespace Booker.Infrastructure.Repositories
+namespace Booker.Core.Repositories
 {
-    public class ServiceRepository : Repository<Service>, IServiceRepository
+    public interface IExternalLoginRepository : IRepository<ExternalLogin>
     {
-       
     }
 }
