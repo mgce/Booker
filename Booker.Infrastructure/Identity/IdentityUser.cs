@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Booker.Infrastructure.Identity
 {
@@ -7,17 +9,20 @@ namespace Booker.Infrastructure.Identity
     {
         public IdentityUser()
         {
-            this.Id = Guid.NewGuid();
+            Id = Guid.NewGuid();
         }
 
         public IdentityUser(string username) : this()
         {
-            this.UserName = username;
+            UserName = username;
         }
 
         public Guid Id { get; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public string Email { get; set; }
         public string Salt { get; set; }
+
+        public ICollection<IdentityUserLogin> Logins { get; set; }
     }
 }
