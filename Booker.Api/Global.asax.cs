@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac.Integration.WebApi;
 
 namespace Booker.Api
 {
@@ -15,7 +16,7 @@ namespace Booker.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AutofacConfiguration.Configure();            
+            AutofacConfiguration.Configure();     
         }
     }
 }
